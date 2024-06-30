@@ -90,12 +90,26 @@ for car in cars {
 
 
 var maxwins: Int = 0
-var winner: String = ""
-for (key, value) in statistics {
-    if value > maxwins {
-        maxwins = value
-        winner = key
+var winners: [String] = []
+
+for (carInfo, wins) in statistics {
+    if wins > maxwins {
+        maxwins = wins
+        winners = [carInfo]
+    } 
+    else if wins == maxwins {
+        winners.append(carInfo)
     }
 }
 
-print("По итогам всех встреч первое место занимает \(winner) с числом побед: \(maxwins)")
+if winners.count == 1 {
+    print("По итогам всех встреч первое место занимает \(winners[0]) с числом побед: \(maxwins)")
+}
+else {
+    print("Ничья между:")
+    for winner in winners {
+        print(winner)
+    }
+}
+
+
