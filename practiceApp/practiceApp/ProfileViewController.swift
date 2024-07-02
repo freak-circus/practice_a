@@ -29,4 +29,7 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    @IBAction func logOut(_ sender: UIButton) {
+        navigationController?.popViewController(animated: false)
+    }
 }
