@@ -1,16 +1,8 @@
-//
-//  FavoritesViewController.swift
-//  practiceApp
-//
-//  Created by Богдан on 03.07.2024.
-//
-
-import Foundation
 import UIKit
 
 class FavoritesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
